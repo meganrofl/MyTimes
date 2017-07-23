@@ -1,0 +1,213 @@
+body {
+  margin: 0;   /*This sets the top and bottom margins to 0 pixels */
+  font-family: Georgia;
+  font-size: 17px;
+  color: black;
+}
+
+a {
+  color: black; /*Changes the links from the default blue to black */
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Georgia;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+nav span {
+  display: inline-block;   /*This really plays effect into how the links appear as the page grows or shrinks */
+  padding: 20px 10px;   /*Creates 20px of padding for the top and bottom and 10px of padding for the left and right sides of the nav links */
+}
+
+.stories {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+}
+
+.stories .text-content {
+  height: 250px;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.narrative {
+  margin-top: 16px;
+}
+
+.image-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px; /* creates the height required for image */
+  margin-top: 15px; /*Creates 15px of additional space*/
+  font-family: Georgia;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+/* Header Section CSS BEGINS HERE*/
+
+header {
+  display: flex; /*display: flex brings the nav links to the right of the logo image */
+  align-items: center; /*aligns the nav links in the middle */
+  position: fixed; /*should keep the header section at the top of the page regardless if the user scrolls */
+  z-index: 1; /* */
+  width: 100%; /*Assures the header is the entire width of the page*/
+  height: 80px; /*Space the header section 80px from the top of the page */
+  border-bottom: 1px solid black; /*Creates the dividing black border  */
+  background-color: white;
+  font-family: Verdana; /*Changes font to Verdana */
+  font-size: 14px; /*Changes the font to be slightly smaller */
+  font-weight: bold;
+  /* */
+}
+
+.logo {
+  display: flex; /*display: flex brings the TITLE "My Times" to the right of the logo image and in between the nav links */
+  align-items: center; /*aligns the TITLE "My Times" in the middle */
+  flex-grow: 1;   /*Adding flex-grow: 1 pushed the nav links to the far right width of the div container */
+  padding-left: 30px;   /*Adding this padding to the left of the logo gave it 30px of space from the of the page */
+}
+
+.logo img {
+  width: 70px;
+  height: 60px;
+  margin-right: 12px;   /*This created 12px of space between the Logo picture and the TITLE "My Times" */
+}
+
+.logo span {
+  color: MediumAquamarine;   /*Changes the color of the TITLE "My Times" (Because the SPAN was created within the DIV LOGO in index.html) */
+}
+
+header nav{
+  padding-right: 40px;   /*Creates 40px of space between the Nav links and the far right of the page */
+}
+
+/* Main Content Container CSS BEGINS HERE*/
+
+.content {
+  display:flex; /*This flex sets everything to columns */
+  width: 1232px; /*This immediately widens each container */
+  margin: 0 auto 78px auto; /*This helps to center all the content to the middle of the page */
+  padding-top: 116px; /*This provides 116px of padding space to the content container ie. moves all the text down below the header-which is fixed to stay at the top of the webpage regardless if the user scrolls */
+}
+
+.column {
+  display: flex; /*This creates the class column to be a flex container */
+  flex-direction: column; /*flex items will be ordered vertically, not horizontally*/
+  margin-right:32px; /*only the right side of the column's box will have a margin of 15 pixels */
+}
+
+/*Main Container CSS ENDS here*/
+
+/*First News Column CSS BEGINS HERE*/
+.column.large {
+  width: 630px;
+
+}
+
+.lead-story .image-content {
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-story-main.png);
+  width: 630px;
+  margin-top: 0;
+  font-size: 40px;
+  text-align: left;
+}
+
+.lead-story .image-content span {
+  margin-left: 20px;
+}
+
+.fall-cancelled.image-content {
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-story-2.png);
+}
+
+.pop-culture.image-content {
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-story-3.png);
+}
+/*First News Column CSS ENDS HERE */
+
+
+/*Second News Column CSS BEGINS HERE*/
+
+.column.medium {
+  width: 300px;
+}
+
+.cat-ceo.image-content {
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-story-1.png);
+}
+/*Second News Column CSS ENDS HERE */
+
+/*THIRD News Column CSS BEGINS HERE */
+.column.small {
+  width: 240px;
+}
+
+img.cookie {
+  height: 240px;
+}
+
+.news-bites .bite {
+  display: block;
+  padding: 11px 20px;
+  border-bottom: 1px solid black;
+  background-color: whitesmoke;
+  font-family: Verdana;
+  font-size: 12px;
+  color: DimGray;
+}
+
+.news-bites h3 {
+  margin-bottom: 41px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bite span {
+  padding-left: 11px;
+}
+
+/*THIRD News Column CSS ENDS HERE */
+
+/* footer area begins here */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 325px;
+  background-color: MediumAquamarine;
+  margin: auto;
+  font-family: Verdana;
+  font-size: 12px;
+}
+
+footer .title {
+  display: inline-block;
+  padding-right: 25px;
+  border-right: 2px solid white;
+  font-family: Georgia;
+  font-size: 16px;
+  font-weight: bold;
+  color: whtie;
+}
+
+footer nav {
+  display: inline-block;
+  padding-left: 25px;
+}
+/* footer area ends here */
